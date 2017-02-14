@@ -49,7 +49,7 @@
             item.title = title;
         }
 
-        UIBarButtonItem *doneButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self.delegate action:@selector(doneButtonTapped:)];
+        UIBarButtonItem *doneButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self.delegate action:@selector(doneButtonTapped:)];
         item.leftBarButtonItem = doneButton;
 
 #if (READER_BOOKMARKS == TRUE)

@@ -64,7 +64,7 @@
         NSMutableArray *rightBarButtonItems = [[NSMutableArray alloc] init];
 
 #if (READER_STANDALONE == FALSE)
-        UIBarButtonItem *doneButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self.delegate action:@selector(doneButtonTapped:)];
+        UIBarButtonItem *doneButton =[[UIBarButtonItem alloc] initWithTitle:@"Terminer" style:UIBarButtonItemStyleDone target:self.delegate action:@selector(doneButtonTapped:)];
         [leftBarButtonItems addObject:doneButton];
 #endif
 
@@ -110,7 +110,11 @@
 
         if (document.canExport == YES) // Document export enabled
         {
-            UIBarButtonItem *exportButton =[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Reader-Export"] style:UIBarButtonItemStylePlain target:self.delegate action:@selector(exportButtonTapped:)];
+            
+            UIBarButtonItem *exportButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                          target:self.delegate
+                                                          action:@selector(exportButtonTapped:)];
+            
             [rightBarButtonItems addObject:exportButton];
         }
 
