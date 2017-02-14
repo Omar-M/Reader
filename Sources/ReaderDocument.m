@@ -57,6 +57,8 @@
 	NSString *_filePath;
 
 	NSURL *_fileURL;
+    
+    BOOL _canExport;
 }
 
 #pragma mark - Properties
@@ -71,7 +73,8 @@
 @synthesize password = _password;
 @synthesize filePath = _filePath;
 @dynamic fileName, fileURL;
-@dynamic canEmail, canExport, canPrint;
+@dynamic canEmail, canPrint;
+@synthesize canExport = _canExport;
 
 #pragma mark - ReaderDocument class methods
 
@@ -260,11 +263,6 @@
 - (BOOL)canEmail
 {
 	return NO;
-}
-
-- (BOOL)canExport
-{
-	return YES;
 }
 
 - (BOOL)canPrint

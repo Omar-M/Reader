@@ -180,6 +180,7 @@
 
 	if (document != nil) // Must have a valid ReaderDocument object in order to proceed with things
 	{
+        document.canExport = YES;
 		ReaderViewController *readerViewController = [[ReaderViewController alloc] initWithReaderDocument:document];
 
 		readerViewController.delegate = self; // Set the ReaderViewController delegate to self
