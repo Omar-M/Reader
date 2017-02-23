@@ -82,6 +82,7 @@
 #pragma mark - Properties
 
 @synthesize delegate;
+@synthesize document;
 
 #pragma mark - ReaderViewController methods
 
